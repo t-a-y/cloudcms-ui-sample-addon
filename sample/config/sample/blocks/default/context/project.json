@@ -4,8 +4,8 @@
         "context": {
             "items": [
                    {
-                    "key": "catalog/header",
-                    "title": "Catalog",
+                    "key": "tay/header",
+                    "title": "Tay",
                     "order": 10000,
                     "header": true,
                     "iconClass": "fa fa-dashboard",
@@ -14,14 +14,6 @@
                     "rejectAuthority": [],
                     "rejectPermission": [],
                     "items": [{
-                        "key": "sample/products",
-                        "title": "Products",
-                        "uri": "#/projects/{projectId}/products",
-                        "iconClass": "fa fa-pencil",
-                        "allowPermission": [
-                            "manager"
-                        ]
-                    },{
                         "key": "sample/tay",
                         "title": "Tay",
                         "uri": "#/projects/{projectId}/tayd",
