@@ -1,0 +1,39 @@
+{
+  "replace": true,
+  "dashboard": {
+    "rows": [
+      {
+        "cols": [
+          {
+            "dashlets": [
+              {
+                "title": "My Project Documents",
+                "type": "project-content",
+                "chrome": true
+              }
+            ]
+          },
+          {
+            "dashlets": []
+          }
+        ]
+      },
+      {
+        "cols": [
+          {
+            "dashlets": []
+          },
+          {
+            "dashlets": [
+              {
+                "title": "My Project Tasks",
+                "type": "project-tasks",
+                "chrome": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
