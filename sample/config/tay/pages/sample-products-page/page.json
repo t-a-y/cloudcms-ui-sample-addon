@@ -1,6 +1,4 @@
 {
-    "title": "Catalog Products",
-    "uri": "/projects/{projectId}/products",
-    "extends": "project/_project",
-    "template": "sample-template"
+    "title": "TAY",
+    "uri": "/projects/{projectId}/tay/content"
 }

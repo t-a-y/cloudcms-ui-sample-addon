@@ -6,7 +6,7 @@ define(function(require) {
     // dashlet: "sample-random-product-dashlet"
     require("./gadgets/sample-random-product-dashlet/sample-random-product-dashlet.js");
 
-    // dashlet: "tay-project-dashboard"
+    // page: "tay-project-dashboard"
     require("./gadgets/tay-project-dashboard/tay-project-dashboard.js");
 
     // action: "create-sample-space"
