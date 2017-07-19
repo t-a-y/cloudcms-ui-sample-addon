@@ -23,7 +23,7 @@
                         ]
                     },{
                         "key": "sample/tay",
-                        "title": "Products",
+                        "title": "Tay",
                         "uri": "#/projects/{projectId}/tayd",
                         "iconClass": "fa fa-pencil",
                         "allowPermission": [
