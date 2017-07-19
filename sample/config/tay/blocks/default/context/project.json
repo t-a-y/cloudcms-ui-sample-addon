@@ -16,7 +16,7 @@
                     "items": [{
                         "key": "sample/tay",
                         "title": "Tay",
-                        "uri": "#/projects/{projectId}/tayd",
+                        "uri": "#/projects/{projectId}/tay/content",
                         "iconClass": "fa fa-pencil",
                         "allowPermission": [
                             "manager"
