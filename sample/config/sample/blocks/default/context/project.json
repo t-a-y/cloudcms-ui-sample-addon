@@ -3,26 +3,7 @@
     "config": {
         "context": {
             "items": [
-                {
-                "key": "catalog/header",
-                "title": "Tay",
-                "order": 9000,
-                "header": true,
-                "iconClass": "fa fa-dashboard",
-                "allowAuthority": ["manager"],
-                "allowPermission": ["read"],
-                "rejectAuthority": [],
-                "rejectPermission": [],
-                "items": [{
-                    "key": "sample/products",
-                    "title": "Tay",
-                    "uri": "#/projects/{projectId}/tayd",
-                    "iconClass": "fa fa-pencil",
-                    "allowPermission": [
-                        "manager"
-                    ]
-                }]
-            },   {
+                   {
                     "key": "catalog/header",
                     "title": "Catalog",
                     "order": 10000,
@@ -40,7 +21,16 @@
                         "allowPermission": [
                             "manager"
                         ]
-                    }]
+                    },{
+                        "key": "sample/tay",
+                        "title": "Products",
+                        "uri": "#/projects/{projectId}/tayd",
+                        "iconClass": "fa fa-pencil",
+                        "allowPermission": [
+                            "manager"
+                        ]
+                    }
+                    ]
                 }
             ]
         }
