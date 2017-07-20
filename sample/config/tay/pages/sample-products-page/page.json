@@ -2,5 +2,5 @@
     "title": "Tay",
     "uri": "/projects/{projectId}/tay/content",
     "extends": "project/_project",
-    "template": "sample-template"
+    "template": "sample-template-tay"
 }
