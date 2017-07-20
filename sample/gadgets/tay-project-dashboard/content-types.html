@@ -1,0 +1,45 @@
+"<div class="content-types">
+    {{#if chrome}}
+    <div class="chrome chrome-header">
+        <div class="chrome-title">{{chrome.title}}</div>
+    </div>
+    <div class="chrome chrome-body">
+        {{/if}}
+
+        <nav class="navmenu navmenu-default navmenu-fixed-left offcanvas-sm" role="navigation">
+
+            {{#compare types.length 0}}
+            <div class="no-content-types">
+                There are no content types configured.
+                <br/>
+                <br/>
+                <a href="#/projects/{{projectId}}/definitions">Configure Content Types...</a>
+            </div>
+            {{/compare}}
+
+            {{#greaterThan types.length 0}}
+            <ul class="nav navmenu-nav">
+
+                <li class="header">
+                    <span>Content Types</span>
+                </li>
+
+                {{#each types}}
+                <li class="{{#if current}}active{{/if}} {{#if cssClass}}{{cssClass}}{{/if}}">
+                    <a href="/#/projects/{{../projectId}}/content/{{qname}}" class="content-type-link" data-dispatch-uri="/projects/{{../projectId}}/content/{{qname}}" title="{{title}}">
+                        <i class="icon {{#if iconClass}}{{iconClass}}{{else}}fa fa-angle-right{{/if}}"></i>
+                        <span>{{displayTitle}}</span>
+                    </a>
+                </li>
+                {{/each}}
+
+            </ul>
+            {{/greaterThan}}
+
+        </nav>
+
+
+        {{#if chrome}}
+    </div>
+    {{/if}}
+</div>

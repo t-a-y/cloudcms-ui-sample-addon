@@ -1,6 +1,6 @@
 define(function(require, exports, module) {
   var i = require("text!./content-types.html");
-  require("css!./content-types.css");
+  // require("css!./content-types.css");
   var o = require("ratchet/web")
     , r = require("oneteam")
     , a = require("ratchet/dynamic/empty");
