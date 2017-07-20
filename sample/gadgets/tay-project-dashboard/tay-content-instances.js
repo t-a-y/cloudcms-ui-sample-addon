@@ -4,7 +4,7 @@
 
   // define("css!app/gadgets/project/content/content-instances", [], function () {
   // })
-  define("sample/gadgets/project/content/tay-content-instances", ["require", "exports", "module", "css!./content-instances.css", "ratchet/web", "ratchet/dynamic/doclist", "oneteam"], function (e, t, n) {
+  define(function (e, t, n) {
     // e("css!./content-instances.css");
     var i = e("ratchet/web")
       , o = e("ratchet/dynamic/doclist")
