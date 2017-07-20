@@ -1,6 +1,6 @@
-define("app/gadgets/project/content/tay-content-types", ["require", "exports", "module", "text!./content-types.html", "css!./content-types.css", "ratchet/web", "oneteam", "ratchet/dynamic/empty"], function (require, t, n) {
+define(function(require, exports, module) {
   var i = require("text!./content-types.html");
-  e("css!./content-types.css");
+  require("css!./content-types.css");
   var o = require("ratchet/web")
     , r = require("oneteam")
     , a = require("ratchet/dynamic/empty");
