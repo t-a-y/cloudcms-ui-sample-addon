@@ -1,8 +1,8 @@
 {
-    "type": "sample-products-list",
+    "type": "tay-content-instances",
     "config": {
         "chrome": {
-            "title": "Sample Products List"
+            "title": "tay-content-instances"
         }
     }
 }

@@ -1,0 +1,8 @@
+{
+  "type": "tay-entity-types",
+  "config": {
+    "chrome": {
+      "title": "tay-entity-types"
+    }
+  }
+}

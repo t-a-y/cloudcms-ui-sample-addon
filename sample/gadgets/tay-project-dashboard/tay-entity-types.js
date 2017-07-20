@@ -4,7 +4,7 @@ define(function(require, exports, module) {
   var o = require("ratchet/web")
     , r = require("oneteam")
     , a = require("ratchet/dynamic/empty");
-  return o.GadgetRegistry.register("tay-content-types", a.extend({
+  return o.GadgetRegistry.register("tay-entity-types", a.extend({
     TEMPLATE: i,
     configureDefault: function () {
       this.base()
