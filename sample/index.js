@@ -7,7 +7,8 @@ define(function(require) {
     require("./gadgets/sample-random-product-dashlet/sample-random-product-dashlet.js");
 
     // page: "tay-project-dashboard"
-    require("./gadgets/tay-project-dashboard/tay-project-dashboard.js");
+    require("./gadgets/tay-project-dashboard/tay-content-instances.js");
+    require("./gadgets/tay-project-dashboard/tay-entity-types.js");
 
     // action: "create-sample-space"
     require("./actions/sample/create-sample-space.js");
