@@ -1,6 +1,6 @@
 {
     "title": "Tay",
-    "uri": "/projects/{projectId}/tay/content",
+    "uri": "/projects/{projectId}/tay/content/{selectedContentType}",
     "extends": "project/_project",
     "template": "sample-template-tay"
 }
