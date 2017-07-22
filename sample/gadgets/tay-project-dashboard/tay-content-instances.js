@@ -12,16 +12,19 @@
     i.Messages.using();
     return i.GadgetRegistry.register("tay-content-instances", o.extend({
       configureDefault: function () {
-        this.base(),
-          this.config({
-            observables: {
-              query: "tay-content-instances-list_query",
-              sort: "tay-content-instances-list_sort",
-              sortDirection: "tay-content-instances-list_sortDirection",
-              searchTerm: "tay-content-instances-list_searchTerm",
-              selectedItems: "tay-content-instances-list_selectedItems"
-            }
-          })
+        this.base();
+        var c = {"columnHeaders":true,"buttons":[{"key":"create-content","title":"Create Content","iconClass":"fa fa-plus","align":"left","action":"create-content","allowPermission":["create"],"category":"capabilities-check"},{"key":"sort-direction-selector","align":"right"},{"key":"sort-selector","title":"Sort...","align":"right","buttons":[{"key":"sort-field-title","title":"Title","field":"title","selectorGroup":"sort-selector-group"},{"key":"sort-field-description","title":"Description","field":"description","selectorGroup":"sort-selector-group"},{"key":"sort-field-createdOn","title":"Created On","field":"_system.created_on.ms","selectorGroup":"sort-selector-group"},{"key":"sort-field-createdBy","title":"Created By","field":"_system.created_by","selectorGroup":"sort-selector-group"},{"key":"sort-field-modifiedOn","title":"Modified On","field":"_system.modified_on.ms","selectorGroup":"sort-selector-group"},{"key":"sort-field-modifiedBy","title":"Modified By","field":"_system.modified_by","selectorGroup":"sort-selector-group"},{"key":"sort-field-type","title":"Type","field":"TYPE","selectorGroup":"sort-selector-group"},{"key":"sort-field-size","title":"Size","field":"size","selectorGroup":"sort-selector-group"}]},{"key":"multi-documents-action-selector","title":"Selected...","align":"right","buttons":[{"key":"multi-documents-action-delete-content","title":"Delete Content Instance","action":"delete-content","selectorGroup":"multi-documents-action-selector-group","iconClass":"glyphicon glyphicon-trash"},{"key":"multi-documents-action-edit-content","title":"Edit Content","action":"edit-content","selectorGroup":"multi-documents-action-selector-group","iconClass":"glyphicon glyphicon-pencil"},{"key":"multi-documents-action-start-workflow","title":"Start a Workflow","action":"start-workflow","selectorGroup":"multi-documents-action-selector-group","iconClass":"fa fa-share-alt"}]}],"navbox":false,"defaultFirstColumnAsId":true,"options":{"filter":true,"paginate":true,"info":true,"sizing":true,"processing":true},"observables":{"query":"content-instances-list_query","sort":"content-instances-list_sort","sortDirection":"content-instances-list_sortDirection","searchTerm":"content-instances-list_searchTerm","selectedItems":"content-instances-list_selectedItems","length":"length","optionsFilter":"optionsFilter","refresh":"refresh_content-instances_gadget132"},"checkbox":true,"icon":true,"columns":[{"key":"titleDescription","title":"Content Instance"}],"loader":"gitana","lengthMenu":{"values":[10,25,50,100,999999],"labels":[10,25,50,100,"All"]},"selectorGroups":{"multi-documents-action-selector-group":{"actions":[{"action":"delete-content","order":100,"_allowPermission":["delete"]},{"action":"edit-content","order":200,"_allowPermission":["update"]},{"action":"start-workflow","order":300,"_allowAuthority":["collaborator","contributor","editor","manager"]}]},"single-document-action-selector-group":{"actions":[]},"sort-selector-group":{"fields":[{"key":"title","title":"Title","field":"title"},{"key":"description","title":"Description","field":"description"},{"key":"createdOn","title":"Created On","field":"_system.created_on.ms"},{"key":"createdBy","title":"Created By","field":"_system.created_by"},{"key":"modifiedOn","title":"Modified On","field":"_system.modified_on.ms"},{"key":"modifiedBy","title":"Modified By","field":"_system.modified_by"},{"key":"type","title":"Type","field":"TYPE"},{"key":"size","title":"Size","field":"size"}]},"options-filter":{"options":[]}},"chrome":false,"cssClasses":" content-instances","tokens":{"projectId":"e1b5b4592c39d60bae02"},"route":{"method":"GET","uri":"/projects/e1b5b4592c39d60bae02/content"},"uri":"/projects/e1b5b4592c39d60bae02/content","method":"GET","items":[],"originalSelectorGroups":{"multi-documents-action-selector-group":{"actions":[{"action":"delete-content","order":100,"_allowPermission":["delete"]},{"action":"edit-content","order":200,"_allowPermission":["update"]},{"action":"start-workflow","order":300,"_allowAuthority":["collaborator","contributor","editor","manager"]}]},"single-document-action-selector-group":{"actions":[]},"sort-selector-group":{"fields":[{"key":"title","title":"Title","field":"title"},{"key":"description","title":"Description","field":"description"},{"key":"createdOn","title":"Created On","field":"_system.created_on.ms"},{"key":"createdBy","title":"Created By","field":"_system.created_by"},{"key":"modifiedOn","title":"Modified On","field":"_system.modified_on.ms"},{"key":"modifiedBy","title":"Modified By","field":"_system.modified_by"},{"key":"type","title":"Type","field":"TYPE"},{"key":"size","title":"Size","field":"size"}]},"options-filter":{"options":[]}}}
+        this.config(c);
+          // this.config({
+          //   loader: 'gitana',
+          //   observables: {
+          //     query: "tay-content-instances-list_query",
+          //     sort: "tay-content-instances-list_sort",
+          //     sortDirection: "tay-content-instances-list_sortDirection",
+          //     searchTerm: "tay-content-instances-list_searchTerm",
+          //     selectedItems: "tay-content-instances-list_selectedItems"
+          //   }
+          // })
       },
       setup: function () {
         this.get("/projects/{projectId}/tay/content", this.index),
