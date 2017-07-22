@@ -15,11 +15,11 @@
         this.base(),
           this.config({
             observables: {
-              query: "content-instances-list_query",
-              sort: "content-instances-list_sort",
-              sortDirection: "content-instances-list_sortDirection",
-              searchTerm: "content-instances-list_searchTerm",
-              selectedItems: "content-instances-list_selectedItems"
+              query: "tay-content-instances-list_query",
+              sort: "tay-content-instances-list_sort",
+              sortDirection: "tay-content-instances-list_sortDirection",
+              searchTerm: "tay-content-instances-list_searchTerm",
+              selectedItems: "tay-content-instances-list_selectedItems"
             }
           })
       },
