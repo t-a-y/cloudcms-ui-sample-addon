@@ -194,6 +194,7 @@ define(function (e, t, n) {
       if ("titleDescription" == t.key) {
         var l = r.buildNodeSummary(e, !1, a);
         s = r.listTitleDescription(i, e, null, null, !1, l)
+        s = s + "<div>published:" + e.published.toString() +"</div>"
       }
       return s
     }
