@@ -8,7 +8,7 @@ define(function (e, t, n) {
   // e("css!./content-instances.css");
   var i = e("ratchet/web")
     , o = e("ratchet/dynamic/doclist")
-    , r = e("oneteam");
+    , oneteam = e("oneteam");
   i.Messages.using();
   return i.GadgetRegistry.register("tay-content-instances", o.extend({
     configureDefault: function () {
@@ -170,9 +170,9 @@ define(function (e, t, n) {
     doGitanaQuery: function (e, t, n, i, o, a) {
       var s = this;
       s.observable("project").get();
-      r.isEmptyOrNonExistent(i) && n && (i = r.searchQuery(n, ["title", "description"])),
+      oneteam.isEmptyOrNonExistent(i) && n && (i = oneteam.searchQuery(n, ["title", "description"])),
       i || (i = {}),
-        r.projectBranch(s, function () {
+        oneteam.projectBranch(s, function () {
           var e = s.observable("selected-content-type").get();
           return e ? (i._type = e.definition.getQName(),
               void this.queryNodes(i, o).then(function () {
@@ -185,18 +185,18 @@ define(function (e, t, n) {
       return "#/projects/" + i + "/documents/" + e._doc
     },
     iconUri: function (e, t, n) {
-      return r.iconUriForNode(e)
+      return oneteam.iconUriForNode(e)
     },
-    columnValue: function (e, t, n, i) {
+    columnValue: function (row, item, model, context) {
       var o = this
-        , a = o.observable("project").get()
-        , s = this.base(e, t);
-      if ("titleDescription" == t.key) {
-        var l = r.buildNodeSummary(e, !1, a);
-        s = r.listTitleDescription(i, e, null, null, !1, l)
-        s = s + "<div>published:" + e.published.toString() +"</div>"
+        , project = o.observable("project").get()
+        , value = this.base(row, item);
+      if ("titleDescription" == item.key) {
+        var l = oneteam.buildNodeSummary(row, !1, project);
+        value = oneteam.listTitleDescription(context, row, null, null, !1, l)
+        value += "<div>published:" + row.published.toString() +"</div>"
       }
-      return s
+      return value
     }
   }))
 })
