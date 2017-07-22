@@ -194,7 +194,11 @@ define(function (e, t, n) {
       if ("titleDescription" == item.key) {
         var l = oneteam.buildNodeSummary(row, !1, project);
         value = oneteam.listTitleDescription(context, row, null, null, !1, l)
-        value += "<div>published:" + row.published.toString() +"</div>"
+        var pub = "False";
+        if (row.published) {
+          pub = "True"
+        }
+        value += "<div>Published : " + pub +"</div>"
       }
       return value
     }
