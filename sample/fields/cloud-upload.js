@@ -2,7 +2,7 @@
   var $ = require("jquery");
   var Alpaca = $.alpaca;
 
-  Alpaca.Fields.UploadField = Alpaca.ControlField.extend(
+  Alpaca.Fields.CloudUpload = Alpaca.ControlField.extend(
     /**
      * @lends Alpaca.Fields.UploadField.prototype
      */
@@ -119,7 +119,7 @@
        * @see Alpaca.ControlField#getFieldType
        */
       getFieldType: function() {
-        return "upload";
+        return "cloud";
       },
 
       /**
