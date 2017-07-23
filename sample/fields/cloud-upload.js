@@ -322,7 +322,7 @@ define(function (require, exports, module) {
             debugger;
             $(self.control).find(".btn").cloudinary_upload_widget(
               {
-                cloud_name: 'dlda5s5aj',
+                cloud_name: 'dlda5s5aj', upload_preset: 'v2siidxa',
                 cropping: 'server', folder: 'user_photos'
               },
               function (error, result) {
