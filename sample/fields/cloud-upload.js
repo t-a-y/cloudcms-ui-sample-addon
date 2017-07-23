@@ -314,13 +314,13 @@ define(function (require, exports, module) {
               $(self.control).find(".alpaca-fileupload-chooserow").hide();
               $(self.control).find(".dropzone-message").hide();
             }
-            $(self.control).find("btn").click(function (e) {
+            $(self.control).find(".btn").click(function (e) {
 
               e.preventDefault();
 
             });
             debugger;
-            $(self.control).find("btn").cloudinary_upload_widget(
+            $(self.control).find(".btn").cloudinary_upload_widget(
               {
                 cloud_name: 'dlda5s5aj', upload_preset: 'a5vxnzbp',
                 cropping: 'server', folder: 'user_photos'
