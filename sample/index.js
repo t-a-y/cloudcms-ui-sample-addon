@@ -2,7 +2,7 @@ define(function(require) {
 
     // page: "sample-products-list"
     require("./gadgets/sample-products-list/sample-products-list.js");
-    require("../dev/cloud");
+    require("../dev/cloud.js");
 
 
     // dashlet: "sample-random-product-dashlet"
@@ -17,6 +17,7 @@ define(function(require) {
 
     // sample form fields
     require("./fields/sample-city-picker.js");
+    require("./fields/cloud-upload.js");
     require("./fields/sample-content-picker.js");
 
     // sample override to document-properties
