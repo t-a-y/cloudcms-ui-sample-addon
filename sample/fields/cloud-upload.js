@@ -314,7 +314,7 @@ define(function (require, exports, module) {
               $(self.control).find(".alpaca-fileupload-chooserow").hide();
               $(self.control).find(".dropzone-message").hide();
             }
-            $(self.control).find("button").click(function (e) {
+            $(self.control).find("btn").click(function (e) {
 
               e.preventDefault();
 
