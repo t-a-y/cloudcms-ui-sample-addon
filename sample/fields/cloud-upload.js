@@ -109,7 +109,9 @@ define(function (require, exports, module) {
         };
       },
 
-
+      getFieldType: function () {
+        return "upload";
+      },
 
       /**
        * @see Alpaca.Fields.TextField#setup
