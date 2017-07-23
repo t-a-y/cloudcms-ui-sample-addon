@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
   var $ = require("jquery");
   var Alpaca = $.alpaca;
-
+  var UI = require("ui");
   return UI.registerField('cloud-upload', Alpaca.ControlField.extend(
     /**
      * @lends Alpaca.Fields.UploadField.prototype
@@ -109,12 +109,7 @@ define(function (require, exports, module) {
         };
       },
 
-      /**
-       * @see Alpaca.ControlField#getFieldType
-       */
-      getFieldType: function () {
-        return "cloud";
-      },
+
 
       /**
        * @see Alpaca.Fields.TextField#setup
