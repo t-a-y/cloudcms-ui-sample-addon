@@ -319,6 +319,7 @@ define(function (require, exports, module) {
               e.preventDefault();
 
             });
+            debugger;
             $(self.control).find("button").cloudinary_upload_widget(
               {
                 cloud_name: 'dlda5s5aj', upload_preset: 'a5vxnzbp',
@@ -664,6 +665,22 @@ define(function (require, exports, module) {
         return text;
       },
 
+      /**
+       * Extension point for adding properties and callbacks to the file upload config.
+       *
+       * @param fileUploadconfig
+       */
+      applyConfiguration: function(fileUploadconfig)
+      {
+      },
+      /**
+       * Extension point for binding event handlers to file upload instance.
+       *
+       * @param fileUpload
+       */
+      applyBindings: function(fileUpload)
+      {
+      },
 
       /**
        * Converts from a file to a storage descriptor.
